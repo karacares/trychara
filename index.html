@@ -5,33 +5,135 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
     <title>Chara</title>
   </head>
   <body class="container m-auto">
-    <div class="flex justify-between w-full py-4">
-      <div>
-        <a href="#">CHARA</a>
-      </div>
-      <div class="flex">
-        <a href="#" class="p-2 text-sm">About</a>
-        <a href="#" class="p-2 text-sm">Pricing</a>
-        <a href="#" class="p-2 text-sm">Industries</a>
-        <a href="#" class="p-2 text-sm">FAQs</a>
-        <a href="#" class="p-2 text-sm">Contact</a>
-        <a
-          href="#"
-          class="px-5 py-2 text-sm rounded-full text-[#014E62] bg-[#D6EFED] self-center font-semibold"
-          >Try Chara</a
+    <!-- nav -->
+    <div class="relative bg-white">
+      <div class="mx-auto px-4 sm:px-6">
+        <div
+          class="flex items-center justify-between py-3 md:justify-start md:space-x-10"
         >
+          <div class="flex justify-start lg:w-0 lg:flex-1">
+            <a href="#">
+              <span class="sr-only">Workflow</span>
+              <img class="h-8 w-auto sm:h-10" src="./assets/logo.svg" alt="" />
+            </a>
+          </div>
+          <div class="-my-2 -mr-2 md:hidden">
+            <button
+              onclick="toggleHandler()"
+              type="button"
+              class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-900"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open menu</span>
+              <!-- Heroicon name: outline/bars-3 -->
+              <svg
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
+            <a href="#" class="p-2 text-xs sm:text-sm">About</a>
+            <a href="#" class="p-2 text-xs sm:text-sm">Pricing</a>
+            <a href="#" class="p-2 text-xs sm:text-sm">Industries</a>
+            <a href="#" class="p-2 text-xs sm:text-sm">FAQs</a>
+            <a href="#" class="p-2 text-xs sm:text-sm">Contact</a>
+            <a
+              href="https://forms.gle/SR1ZABfZquYq63Ck9"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-5 py-2 text-xs sm:text-sm rounded-full text-[#014E62] bg-[#D6EFED] self-center font-semibold"
+              >Join the Waitlist</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="menu"
+        class="absolute inset-x-0 top-0 origin-top-right transform p-2 transition hidden md:hidden"
+      >
+        <div
+          class="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5"
+        >
+          <div class="px-5 pt-5 pb-6">
+            <div class="flex items-center justify-between">
+              <div>
+                <img
+                  class="h-8 w-auto"
+                  src="./assets/logo.svg"
+                  alt="Workflow"
+                />
+              </div>
+              <div class="-mr-2">
+                <button
+                  onclick="toggleHandler()"
+                  type="button"
+                  class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-900"
+                >
+                  <span class="sr-only">Close menu</span>
+                  <!-- Heroicon name: outline/x-mark -->
+                  <svg
+                    class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="mt-6">
+              <nav class="grid gap-y-3">
+                <a href="#" class="p-2 text-sm">About</a>
+                <a href="#" class="p-2 text-sm">Pricing</a>
+                <a href="#" class="p-2 text-sm">Industries</a>
+                <a href="#" class="p-2 text-sm">FAQs</a>
+                <a href="#" class="p-2 text-sm">Contact</a>
+              </nav>
+            </div>
+          </div>
+          <div class="space-y-6 py-3 px-5">
+            <div class="flex justify-center">
+              <a
+                href="https://forms.gle/SR1ZABfZquYq63Ck9"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-5 py-3 text-xs sm:text-sm rounded-full text-[#014E62] bg-[#D6EFED] self-center font-semibold"
+                >Join the Waitlist</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="mt-20 grid grid-cols-2">
-      <div class="">
-        <h1 class="text-5xl pb-4 font-bold">
+    <!-- nav -->
+    <div class="mt-10 sm:mt-20 grid grid-cols-1 gap-x-16 sm:grid-cols-2">
+      <div class="px-4 sm:p-0">
+        <h1 class="text-4xl sm:text-5xl pb-4 font-bold">
           Simplified Customer Service for Businesses.
         </h1>
         <p class="mt-4 text-base font-light py-4">
@@ -40,36 +142,47 @@
           is a dedicated team assigned exclusively to businesses as their
           support team—24/7 to make things easier for you and your customers.
         </p>
-        <button
-          class="mt-4 font-semibold text-sm bg-[#D6EFED] py-3 px-4 rounded-full text-[#014E62]"
+        <a
+          href="https://forms.gle/SR1ZABfZquYq63Ck9"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Join the Waitlist
-        </button>
+          <button
+            class="mt-4 font-semibold text-sm bg-[#D6EFED] py-3 px-4 rounded-full text-[#014E62]"
+          >
+            Join the Waitlist
+          </button>
+        </a>
       </div>
-      <div class="">
-        <img class="w-full" src="./assets/customer_support.png" alt="" />
+      <div class="mt-8 sm:m-0">
+        <img
+          class="w-full sm:w-[70%]"
+          src="./assets/customer_support.png"
+          alt=""
+        />
       </div>
     </div>
     <div class="bg-[#FFFCF5] w-full py-14 px-8 my-10">
-      <h1 class="text-5xl font-bold">
+      <h1 class="text-4xl sm:text-5xl font-bold">
         Retain customers with on-demand, 24/7 customer support.
       </h1>
     </div>
     <div>
-      <h3 class="my-14 text-lg">Benefits of using Chara</h3>
-      <div class="grid grid-cols-2 my-4 gap-y-8 gap-x-80">
+      <div class="my-8 sm:my-14 px-4 sm:p-0">
+        <h3 class="text-lg font-semibold">Why Chara</h3>
+        <p>
+          Reduce your support costs, improve your responsive times and deepen
+          your customer relationships.
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-1 p-4 sm:p-0 sm:grid-cols-2 my-4 gap-y-8 gap-x-10 sm:gap-x-80"
+      >
         <div>
           <img src="./assets/support.svg" class="w-[30px]" alt="" />
           <p class="font-semibold mt-4">Customer Satisfaction</p>
           <p class="font-light">
             Increase customer satisfaction with every interaction.
-          </p>
-        </div>
-        <div>
-          <img src="./assets/calender.svg" class="w-[50px]" alt="" />
-          <p class="font-semibold mt-4">Availability</p>
-          <p class="font-light">
-            Our agents are always available to engage with your customers.
           </p>
         </div>
         <div>
@@ -81,19 +194,20 @@
           </p>
         </div>
         <div>
+          <img src="./assets/calender.svg" class="w-[50px]" alt="" />
+          <p class="font-semibold mt-4">Availability</p>
+          <p class="font-light">
+            Chara makes support available at any time. We solve an important
+            business problem by taking care of the customers.
+          </p>
+        </div>
+
+        <div>
           <img src="./assets/note.svg" class="w-[50px]" alt="" />
           <p class="font-semibold mt-4">Service Level Agreement</p>
           <p class="font-light">
             We work with you to define a turnaround time for dispute resolution
             and customer enquiries.
-          </p>
-        </div>
-        <div>
-          <img src="./assets/love.svg" class="w-[50px]" alt="" />
-          <p class="font-semibold mt-4">Empathy</p>
-          <p class="font-light">
-            Our agents are trained to be empathetic in all customer
-            interactions.
           </p>
         </div>
         <div>
@@ -105,53 +219,69 @@
             operations to better understand how to serve you and your customers.
           </p>
         </div>
+        <div>
+          <img src="./assets/love.svg" class="w-[50px]" alt="" />
+          <p class="font-semibold mt-4">Empathy</p>
+          <p class="font-light">
+            Our agents are trained to be empathetic in all customer
+            interactions.
+          </p>
+        </div>
       </div>
     </div>
-    <div class="bg-[#FFFCF5] w-full py-12 px-8 my-4">
-      <h1 class="text-4xl font-bold mb-4">We’re Flexible</h1>
-      <p class="w-2/5 font-light">
+    <div class="bg-[#FFFCF5] w-full py-12 px-4 sm:px-8 my-12">
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">
+        All-in-One Customer Support Platform.
+      </h1>
+      <p class="w-full sm:w-2/5 font-light">
         We’re able to provide your customers with seamless customer support
         regardless of whatever channel they choose to reach out to you. Our
         trained agents are skilled at supporting your customers across several
         platforms.
       </p>
-      <div class="flex justify-between my-8">
+      <div class="grid grid-cols-2 gap-y-10 sm:grid-cols-4 my-8">
         <div class="flex flex-col justify-center items-center">
           <img src="./assets/phone.svg" class="h-[24px] self-center" alt="" />
-          <p>Phone Calls</p>
+          <p class="text-sm sm:text-base">Phone Calls</p>
         </div>
         <div class="flex flex-col justify-center items-center">
-          <img src="./assets/mail.svg" class="w-[30px]" alt="" />
-          <p>Emails</p>
+          <img src="./assets/mail.svg" class="w-[28px]" alt="" />
+          <p class="text-sm sm:text-base">Emails</p>
         </div>
         <div class="flex flex-col justify-center items-center">
           <img src="./assets/chat.svg" class="h-[24px]" alt="" />
-          <p>Live Chat</p>
+          <p class="text-sm sm:text-base">Live Chat</p>
         </div>
         <div class="flex flex-col justify-center items-center">
           <img
-            src="./assets/linkden-instagram-twitter.svg"
+            src="./assets/linkden-instagram-facebook.svg"
             class="h-[24px]"
             alt=""
           />
-          <p>Social Media</p>
+          <p class="text-sm sm:text-base">Social Media</p>
         </div>
       </div>
-      <div class="flex justify-center my-12">
-        <button
-          class="py-3 px-6 font-bold text-sm rounded-full text-[#014E62] bg-[#D6EFED]"
+      <div class="flex justify-center my-4 sm:my-12">
+        <a
+          href="https://forms.gle/SR1ZABfZquYq63Ck9"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Get Started
-        </button>
+          <button
+            class="py-3 px-6 font-bold text-sm rounded-full text-[#014E62] bg-[#D6EFED]"
+          >
+            Join the Waitlist
+          </button>
+        </a>
       </div>
     </div>
-    <div class="my-20">
+    <div class="my-20 px-4 sm:p-0">
       <p class="text-[#014E62] font-semibold mb-4">Try Chara</p>
-      <p class="font-semibold text-5xl">
+      <p class="font-semibold text-3xl sm:text-5xl">
         Seamless customer <br />
         support starts here.
       </p>
-      <p class="my-4 w-1/2">
+      <p class="my-4 w-full sm:w-1/2">
         Send us an email to better understand how Chara works, how you can
         support your customers better, faster and cheaper, and to figure out the
         most suitable pricing plan for your needs.
@@ -164,14 +294,19 @@
         </button>
       </div>
     </div>
+
     <footer class="bg-black py-10 px-10 text-white">
       <div class="text-white">
-        <p>CHARA</p>
+        <a href="#" class="text-xs sm:text-sm"
+          ><img src="./assets/logo_white.svg" alt=""
+        /></a>
         <p class="text-sm mt-4 font-light">
           Simplified Customer Service for Businesses.
         </p>
       </div>
-      <div class="flex justify-between my-6 w-1/2">
+      <div
+        class="flex justify-between flex-col sm:flex-row my-6 w-full sm:w-1/2"
+      >
         <div class="py-2">
           <p class="py-2">Company</p>
           <div class="flex flex-col">
@@ -190,7 +325,21 @@
             <a href="#" class="font-extralight text-sm py-1">Privacy Policy</a>
           </div>
         </div>
+        <div class="py-2">
+          <p class="py-2">Contact</p>
+          <div class="flex flex-col">
+            <a href="mailto:hey@chara.com" class="font-extralight text-sm py-1"
+              >hey@chara.com</a
+            >
+          </div>
+        </div>
       </div>
     </footer>
   </body>
+  <script>
+    const toggleHandler = () => {
+      const doc = document.getElementById('menu');
+      doc.classList.toggle('!block');
+    };
+  </script>
 </html>
