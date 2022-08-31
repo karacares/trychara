@@ -1,3 +1,4 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   content: ['*.{html,css}'],
   theme: {
@@ -10,6 +11,18 @@ module.exports = {
           200: '#C9FFCC',
           100: '#E5FFE7',
         },
+      },
+      fontFamily: {
+        cabinetRegular: [
+          'CabinetGrotesk-Regular',
+          ...defaultTheme.fontFamily.sans,
+        ],
+        cabinetMedium: [
+          'CabinetGrotesk-Medium',
+          ...defaultTheme.fontFamily.sans,
+        ],
+        cabinetBold: ['CabinetGrotesk-Bold', ...defaultTheme.fontFamily.sans],
+        handoExtraLight: ['Hando-ExtraLight', ...defaultTheme.fontFamily.sans],
       },
     },
   },
